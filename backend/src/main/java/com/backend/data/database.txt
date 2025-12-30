@@ -11,3 +11,17 @@ CREATE TABLE product (
                          category_id BIGINT,
                          FOREIGN KEY (category_id) REFERENCES category(id)
 );
+
+// test cơ sở dữ liệu (phân trang xuất hiện khi có từ 5 sản phẩm trở lên)
+
+INSERT INTO product (id, name, price, status, category_id) VALUES
+(3, 'Smart TV Sony 5...', 120000, 'chờ duyệt', 3),
+(4, 'Iphone 11 Plus', 150000, 'chờ duyệt', 1),
+(5, 'Iphone 12', 150000, 'chờ duyệt', 1),
+(6, 'Smart TV TCL 56...', 200000, 'chờ duyệt', 3),
+(7, 'Smart TV TCL 65...', 250000, 'chờ duyệt', 3),
+(8, 'Tủ lạnh Sony', 170000, 'chờ duyệt', 2),
+(9, 'Tủ lạnh Samsung', 170000, 'chờ duyệt', 2),
+(10, 'Samsung Galaxy ...', 300000, 'chờ duyệt', 1),
+(11, 'Samsung Galaxy ...', 100000, 'đang bán', 1),
+(12, 'Samsung galaxy ...', 100000, 'chờ duyệt', 1);
